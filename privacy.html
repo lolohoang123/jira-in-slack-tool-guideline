@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jira Agent Privacy Policy</title>
+<meta name="description" content="What data Jira Agent for Slack collects, why, how long it is kept, and how to delete it.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="logo">JA</span>Jira Agent</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="guide.html">User guide</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap doc">
+
+  <h1>Privacy Policy</h1>
+  <p class="muted">Effective date: November 27, 2026</p>
+  <p>This policy explains what data <b>Jira Agent for Slack</b> (“the app”, “we”) collects when you install and use it,
+    why we collect it, how long we keep it, who processes it, and how you can access or delete it.</p>
+  <p>Questions or requests about your data: <!-- EDIT: replace with the real support address -->
+    <a href="mailto:support@YOUR-DOMAIN">support@YOUR-DOMAIN</a>.</p>
+
+  <nav class="toc" aria-label="Contents">
+    <b>Contents</b>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#collect">Data we collect and why</a></li>
+      <li><a href="#not-used">Data we receive but do not use</a></li>
+      <li><a href="#not-collected">Data we never access</a></li>
+      <li><a href="#retention">How long we keep data</a></li>
+      <li><a href="#processors">Where data is processed</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#rights">Access and deletion</a></li>
+      <li><a href="#ai">AI features</a></li>
+      <li><a href="#changes">Changes and contact</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="summary">1. Summary</h2>
+  <ul>
+    <li>We store only what the app needs to work: Slack and Jira identifiers, encrypted access tokens, and the
+      worklog requests you create.</li>
+    <li>We cannot read your Slack messages, channels or files.</li>
+    <li>We do not sell data, show ads, or use your data to train AI models.</li>
+    <li>You can delete your data at any time with <code>/jira-agent disconnect</code>, or by uninstalling the app.</li>
+  </ul>
+
+  <h2 id="collect">2. Data we collect and why</h2>
+  <div class="scroll"><table class="stack">
+    <thead><tr><th>Data</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Data"><b>Workspace installation</b>: Slack workspace ID and name, app and bot IDs, the bot access token,
+          granted permissions, the Slack user ID of the person who installed the app, installation time.</td>
+        <td data-l="Why">To answer commands and send messages in your workspace. The bot token and workspace name are encrypted.</td>
+      </tr>
+      <tr>
+        <td data-l="Data"><b>Jira connection</b> (per Slack user): Slack workspace and user IDs, Jira account ID, Jira site
+          ID, URL and name, Jira OAuth access and refresh tokens, token expiry, granted Jira permissions, your time zone,
+          connection times.</td>
+        <td data-l="Why">To call Jira on your behalf, build links to your Jira site, and compute “today” in your time zone.
+          Tokens and the site URL and name are encrypted.</td>
+      </tr>
+      <tr>
+        <td data-l="Data"><b>Worklog requests</b>: issue key, date, start time, duration, description and remaining-estimate
+          choice you enter; your Slack workspace, user and channel IDs; status and timestamps.</td>
+        <td data-l="Why">To show you the approval message, write the worklog to Jira only after you approve it, block
+          duplicate submissions, and keep an audit trail.</td>
+      </tr>
+      <tr>
+        <td data-l="Data"><b>Sign-in links</b>: a random one-time code with your Slack workspace and user IDs.</td>
+        <td data-l="Why">To protect the “Add to Slack” and “Connect Jira” flows against forged requests.</td>
+      </tr>
+      <tr>
+        <td data-l="Data"><b>Usage counters</b>: number of assistant requests per user per hour.</td>
+        <td data-l="Why">To limit abuse of the optional AI assistant.</td>
+      </tr>
+      <tr>
+        <td data-l="Data"><b>Technical logs</b>: Slack workspace and user IDs, request types, error types and times.</td>
+        <td data-l="Why">To operate the service and fix problems. Logs never contain tokens, Slack request bodies or
+          worklog descriptions.</td>
+      </tr>
+    </tbody>
+  </table></div>
+  <p>Data read from Jira to answer a command (ticket summaries, statuses, worklogs) is shown to you in Slack and is
+    not stored.</p>
+
+  <h2 id="not-used">3. Data we receive but do not use</h2>
+  <p>Slack sends every app some information with each command or button click, such as your Slack user name,
+    the channel name and the workspace domain. The app does not store or use these values. When you look up your
+    Jira profile, Atlassian may also return details such as your display name or e-mail address; the app stores
+    only your Jira account ID and time zone.</p>
+
+  <h2 id="not-collected">4. Data we never access</h2>
+  <ul>
+    <li>Slack messages, channel history, files or direct messages (the app does not have these permissions).</li>
+    <li>Slack or Atlassian passwords: sign-in happens on Slack's and Atlassian's own pages.</li>
+    <li>Payment or financial information.</li>
+  </ul>
+
+  <h2 id="retention">5. How long we keep data</h2>
+  <div class="scroll"><table class="stack">
+    <thead><tr><th>Data</th><th>Kept until</th></tr></thead>
+    <tbody>
+      <tr><td data-l="Data">Sign-in links</td><td data-l="Kept until">10 minutes, single use</td></tr>
+      <tr><td data-l="Data">Workspace installation and bot token</td><td data-l="Kept until">The app is uninstalled or its token is revoked</td></tr>
+      <tr><td data-l="Data">Jira connection and tokens</td><td data-l="Kept until"><code>/jira-agent disconnect</code>, reconnecting (replaces it), or uninstalling the app. If Atlassian revokes access, the tokens are deleted at once.</td></tr>
+      <tr><td data-l="Data">Worklog requests not handled</td><td data-l="Kept until">24 hours</td></tr>
+      <tr><td data-l="Data">Approved, rejected or cancelled worklog requests</td><td data-l="Kept until">90 days (audit trail), then deleted automatically</td></tr>
+      <tr><td data-l="Data">Usage counters</td><td data-l="Kept until">2 hours</td></tr>
+      <tr><td data-l="Data">Technical logs</td><td data-l="Kept until">30 days</td></tr>
+      <tr><td data-l="Data">Background tasks that failed (may include a worklog request), kept encrypted for troubleshooting</td><td data-l="Kept until">4 days</td></tr>
+      <tr><td data-l="Data">Encrypted database backups</td><td data-l="Kept until">Up to 35 days (point-in-time recovery)</td></tr>
+    </tbody>
+  </table></div>
+  <p>When the app is uninstalled from a workspace, we delete that workspace's installation, every Jira connection in
+    that workspace, and all pending worklog requests automatically.</p>
+
+  <h2 id="processors">6. Where data is processed</h2>
+  <ul>
+    <li><b>Amazon Web Services</b> (AWS Lambda, DynamoDB, KMS, CloudWatch) in the Asia Pacific (Singapore) region hosts
+      the app and stores the data described above.</li>
+    <li><b>Atlassian</b> receives the requests the app makes to Jira on your behalf.</li>
+    <li><b>Slack</b> receives the messages the app sends you.</li>
+  </ul>
+  <p>We do not sell, rent or share your data with anyone else, except when required by law.</p>
+
+  <h2 id="security">7. Security</h2>
+  <ul>
+    <li>All traffic uses HTTPS (TLS 1.2 or newer). Every request from Slack is checked with Slack's signing secret.</li>
+    <li>Tokens and site names are encrypted with AWS KMS, each bound to its own record; databases are also encrypted at rest.</li>
+    <li>Tokens are never written to logs, never shown in Slack, and never returned to your browser.</li>
+    <li>Only the person who created a worklog request can approve it, and each request can be used once.</li>
+  </ul>
+
+  <h2 id="rights">8. Access and deletion</h2>
+  <p>You can, at any time:</p>
+  <ul>
+    <li><b>Delete your Jira connection and tokens</b>: type <code>/jira-agent disconnect</code> in Slack.</li>
+    <li><b>Revoke Jira access at Atlassian</b>: Atlassian account settings → <i>Connected apps</i> → remove Jira Agent.</li>
+    <li><b>Remove everything for your workspace</b>: a Slack admin uninstalls the app (Slack → Apps → Jira Agent → Remove).</li>
+    <li><b>Ask for a copy, a correction or deletion</b> of any other data (for example your worklog request history),
+      under GDPR, CCPA or similar laws: e-mail <a href="mailto:support@YOUR-DOMAIN">support@YOUR-DOMAIN</a> with your
+      Slack workspace name. We answer within 30 days, usually much sooner.</li>
+  </ul>
+  <p>Worklogs already written to Jira belong to your Jira site; delete them in Jira if needed.</p>
+
+  <h2 id="ai">9. AI features</h2>
+  <p>The optional natural-language assistant is <b>turned off</b>. If it is turned on in the future, the text you type
+    after <code>/jira-agent</code> will be sent to Amazon Bedrock in the same AWS region to understand your request. It will not be
+    stored by the app or used to train models, the assistant will never write to Jira without your approval, and this
+    policy will be updated before the change.</p>
+
+  <h2 id="changes">10. Changes and contact</h2>
+  <p>If we change this policy, we update the effective date above; important changes are also announced on this page
+    before they take effect.</p>
+  <p class="contact"><a href="mailto:support@YOUR-DOMAIN">support@YOUR-DOMAIN</a></p>
+  <p class="muted">See also the <a href="support.html">support page</a>.</p>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jira Agent for Slack. Not affiliated with Slack Technologies or Atlassian.</span>
+    <nav aria-label="Footer"><a href="index.html">Home</a><a href="guide.html">User guide</a><a href="support.html">Support</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>

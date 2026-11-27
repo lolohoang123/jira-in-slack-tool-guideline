@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jira Agent Support</title>
+<meta name="description" content="Get help with Jira Agent for Slack: contact support, fix common problems, uninstall and delete data.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="logo">JA</span>Jira Agent</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="guide.html">User guide</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap doc">
+
+  <h1>Support</h1>
+  <p class="lead">We're happy to help. No account is needed: just send us an e-mail.</p>
+
+  <div class="card">
+    <b>Contact support</b>
+    <p class="contact" style="margin:6px 0"><!-- EDIT: replace with the real support address -->
+      <a href="mailto:support@YOUR-DOMAIN?subject=Jira%20Agent%20support">support@YOUR-DOMAIN</a></p>
+    <p>We reply within <b>2 business days</b>.</p>
+  </div>
+
+  <h2>What to include</h2>
+  <ul>
+    <li>Your Slack workspace name.</li>
+    <li>What you typed or clicked (for example <code>/jira-agent list</code> or the <b>Approve</b> button).</li>
+    <li>The message you saw, and roughly when it happened (with your time zone).</li>
+  </ul>
+  <div class="note warn"><b>Never send</b> passwords, tokens or screenshots that show them. We will never ask for them.</div>
+
+  <h2>Quick answers</h2>
+  <p>Most problems are solved in a minute. In Slack, type <code>/jira-agent help</code> to see every command.</p>
+  <div class="scroll"><table class="stack">
+    <thead><tr><th>You see</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td data-l="You see">“This Slack workspace hasn't installed the Jira app yet”</td>
+          <td data-l="What to do">Install the app from the <a href="index.html">home page</a>, or ask your Slack admin to approve it.</td></tr>
+      <tr><td data-l="You see">“Your Jira account is not connected”</td>
+          <td data-l="What to do">Type <code>/jira-agent connect</code> and approve access on the Atlassian page.</td></tr>
+      <tr><td data-l="You see">“This link has expired or has already been used”</td>
+          <td data-l="What to do">Links work once, for 10 minutes. Type <code>/jira-agent connect</code> again for a new one.</td></tr>
+      <tr><td data-l="You see">“Your Jira authorization has expired or was revoked”</td>
+          <td data-l="What to do">Type <code>/jira-agent connect</code> to connect again.</td></tr>
+      <tr><td data-l="You see">“I couldn't send you the approval … as a direct message”</td>
+          <td data-l="What to do">Open <b>Jira Agent</b> under <i>Apps</i> in Slack's sidebar so the conversation exists, then log the time again.</td></tr>
+      <tr><td data-l="You see">Times or “today” look wrong</td>
+          <td data-l="What to do">Check the time zone in your Atlassian profile (Account settings).</td></tr>
+    </tbody>
+  </table></div>
+  <p>More answers, with pictures, are in the <a href="guide.html#troubleshooting">user guide</a>.</p>
+
+  <h2>Uninstall and delete your data</h2>
+  <ul>
+    <li><b>Disconnect your Jira account</b>: type <code>/jira-agent disconnect</code>. Your stored Jira tokens are deleted.</li>
+    <li><b>Revoke Jira access</b>: Atlassian account settings → <i>Connected apps</i> → remove Jira Agent.</li>
+    <li><b>Uninstall from the workspace</b> (Slack admin): Slack → <i>Apps</i> → Jira Agent → <i>Configuration</i> → <i>Remove App</i>.
+      All data stored for that workspace is deleted automatically.</li>
+    <li><b>Anything else</b>, such as a copy or deletion of your worklog request history: e-mail us. See the
+      <a href="privacy.html">Privacy Policy</a> for what we store and for how long.</li>
+  </ul>
+
+  <h2>Security issues</h2>
+  <p>If you think you found a security problem, e-mail <a href="mailto:support@YOUR-DOMAIN?subject=Security">support@YOUR-DOMAIN</a>
+    with the subject “Security”. Please do not post it publicly until it is fixed.</p>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jira Agent for Slack. Not affiliated with Slack Technologies or Atlassian.</span>
+    <nav aria-label="Footer"><a href="index.html">Home</a><a href="guide.html">User guide</a><a href="privacy.html">Privacy</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>
